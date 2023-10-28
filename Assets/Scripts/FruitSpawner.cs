@@ -33,6 +33,7 @@ public class FruitSpawner : MonoBehaviour
     void setFruit()
     {
         GameObject[] Fruits = {banana,apple,grape,orange};
-        Instantiate(Fruits[Random.Range(0,4)], transform.position, Quaternion.identity);
+        transform.rotation = Quaternion.Euler(Random.Range(-5,5),Random.Range(0,360),Random.Range(-5,5));
+        Instantiate(Fruits[Random.Range(0,4)], transform.position, transform.rotation);
     }
 }
